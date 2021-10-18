@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex_Tasks</title>
+</head>
+<body>
+    <h1>This is the Regex Matcher!!!</h1>
+    <hr>
+    <br><br>
+    <form method="POST"> 
+        {%csrf_token%}
+        <input type="text" name="regText">
+        <br><br>
+
+        <input type="radio" id="Task_1" name="Task" value="Task_1">
+            <label for="Task_1">Extract numbers from a string greater than 100</label><br>
+        <input type="radio" id="Task_2" name="Task" value="Task_2">
+            <label for="Task_2">Extract date from a url string</label><br>
+        <input type="radio" id="Task_3" name="Task" value="Task_3">
+            <label for="Task_3">Extract strings within single quotes in a string</label><br>
+        <input type="radio" id="Task_5" name="Task" value="Task_5">
+            <label for="Task_5">validate IP address</label><br>
+        <input type="radio" id="Task_6" name="Task" value="Task_6">
+            <label for="Task_6">validate MAC address</label><br>
+        <input type="radio" id="Task_7" name="Task" value="Task_7">
+            <label for="Task_7">Convert CamelCase to snake_case</label><br>
+        <br><br>
+        <input type="submit" name="submit">
+        <button type="button" class="clear">Clear</button>
+    </form>
+    <br><br>
+    <h2>Output:</h2>
+    <div class="Output_div">
+        {% if Dataset %}
+            <div>{{Dataset}}</div>
+        {% endif %}
+    </div>
+    <br><br>
+    
+
+    <script>
+       const but=document.querySelector('.clear');
+       function clearOutput(){
+           const op=document.querySelector('.Output_div');
+           op.innerHTML='<div></div>';
+       }
+       but.addEventListener("click",clearOutput);
+
+       if (window.history.replaceState) {
+        window.history.replaceState( null, null, window.location.href );
+       }
+
+      
+    </script>
+    
+</body>
+</html>

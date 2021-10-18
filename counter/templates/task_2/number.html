@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task_2</title>
+</head>
+<body>
+    <h1>The numbers are:</h1>
+    <ul>
+        {% for n in num %}
+        <li>{{n}}</li>
+        {% endfor %}
+    </ul>
+    <br><br>
+    <small>Go back to Counter app</small>
+    <button><a href="{% url 'Counter' %}" style="text-decoration: none; color: #000;">Click here</a></button>
+    <small>Go back to home page</small>
+    <button><a href="{% url 'Home' %}" style="text-decoration: none;color: #000;">Click here</a></button>
+
+    
+</body>
+</html>

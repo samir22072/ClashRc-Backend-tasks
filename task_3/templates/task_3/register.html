@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    
+    
+    <!--
+    <form method="POST" action="">
+        {% csrf_token %}
+        <div>
+            {{form.username.label}}
+            {{form.username}}
+        </div>
+        <div>
+            {{form.email.label}}
+            {{form.email}}
+        </div>
+        <div>
+            {{form.password1.label}}
+            {{form.password1}}
+        </div>
+        <div>
+            {{form.password2.label}}
+            {{form.password2}}
+        </div>
+        <div>
+            <button type="submit">Join</button>
+        </div>
+    </form>
+    {{form.errors}}
+    -->
+    <h1>Registration form</h1>
+    {% for message in messages %}
+    <p>{{message}}</p>
+    {% endfor %}
+    <form method="POST" action="">
+        {% csrf_token %}
+        <fieldset>
+            <Label>username</Label>
+            <input type="text" name="username">
+        </fieldset>
+        <fieldset>
+            <Label>email</Label>
+            <input type="email" name="email">
+        </fieldset>
+        <fieldset>
+            <Label>First name</Label>
+            <input type="text" name="first_name">
+        </fieldset>
+        <fieldset>
+            <Label>Last name</Label>
+            <input type="text" name="last_name">
+        </fieldset>
+        <fieldset>
+            <Label>password</Label>
+            <input type="password" name="password1">
+        </fieldset>
+        <fieldset>
+            <Label>Confirm password</Label>
+            <input type="password" name="password2">
+        </fieldset>
+        <div>
+            <button type="submit">Join</button>
+        </div>
+    </form>
+    <small><a href="{% url 'login'%}">Already have an account?Click here to login</a></small>
+    
+
+    
+</body>
+</html>

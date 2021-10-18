@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    {% for message in messages %}
+    <p>{{message}}</p>
+    {% endfor %}
+    <h1>This is the home-page</h1>
+    <hr>
+    <p>Django is a Python web development framework used to create backend or server side logic. It is beginner friendly as a lot of things come pre loaded with it</p>
+    <hr>
+    <button><a href="{% url 'Counter' %}" style="text-decoration: none;color: #000;"><h3>Counter App</h3></a></button>
+    <button><a href="{% url 'search' %}" style="text-decoration: none;color: #000;"><h3>Search App</h3></a></button>
+    <button><a href="{% url 'Regex' %}" style="text-decoration: none;color: #000;"><h3>Regex App</h3></a></button>
+    <button><a href="{% url 'logout' %}" style="text-decoration: none;color: #000;"><h3>Logout</h3></a></button>
+
+
+</body>
+</html>

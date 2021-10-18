@@ -15,10 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from counter import views as vp
+from counter import views as cv
+from task_3 import views as t3v
+from regex import views as rev
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',vp.index,name="Home"),
-    path('number/',vp.number,name="Counter")
+    path('',cv.index,name="Home"),
+    path('number/',cv.number,name="Counter"),
+    path('register/',t3v.register,name="register"),
+    path('login/',t3v.loginpage,name="login"),
+    path('logout/',t3v.logoutUser,name="logout"),
+    path('search/',t3v.searchUser,name="search"),
+    path('regex/',rev.Regex,name="Regex"),
 ]
